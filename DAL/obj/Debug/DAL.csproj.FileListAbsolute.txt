@@ -1,0 +1,15 @@
+E:\Advanced Programming With .Net\Final\Final Project Here\Projects\Health_Care_360°\DAL\bin\Debug\DAL.dll.config
+E:\Advanced Programming With .Net\Final\Final Project Here\Projects\Health_Care_360°\DAL\bin\Debug\DAL.dll
+E:\Advanced Programming With .Net\Final\Final Project Here\Projects\Health_Care_360°\DAL\bin\Debug\DAL.pdb
+E:\Advanced Programming With .Net\Final\Final Project Here\Projects\Health_Care_360°\DAL\bin\Debug\EntityFramework.dll
+E:\Advanced Programming With .Net\Final\Final Project Here\Projects\Health_Care_360°\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Advanced Programming With .Net\Final\Final Project Here\Projects\Health_Care_360°\DAL\bin\Debug\EntityFramework.xml
+E:\Advanced Programming With .Net\Final\Final Project Here\Projects\Health_Care_360°\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Advanced Programming With .Net\Final\Final Project Here\Projects\Health_Care_360°\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+E:\Advanced Programming With .Net\Final\Final Project Here\Projects\Health_Care_360°\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\Advanced Programming With .Net\Final\Final Project Here\Projects\Health_Care_360°\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\Advanced Programming With .Net\Final\Final Project Here\Projects\Health_Care_360°\DAL\obj\Debug\DAL.dll
+E:\Advanced Programming With .Net\Final\Final Project Here\Projects\Health_Care_360°\DAL\obj\Debug\DAL.pdb
+E:\Advanced Programming With .Net\Final\Final Project Here\Projects\Health_Care_360°\DAL\obj\Debug\DAL.Migrations.CreateFourDHPSTables.resources
+E:\Advanced Programming With .Net\Final\Final Project Here\Projects\Health_Care_360°\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+E:\Advanced Programming With .Net\Final\Final Project Here\Projects\Health_Care_360°\DAL\obj\Debug\DAL.Migrations.AddingNotNull.resources
