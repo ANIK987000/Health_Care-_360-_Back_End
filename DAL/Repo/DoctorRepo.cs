@@ -1,4 +1,5 @@
-﻿using DAL.EF.Models;
+﻿using DAL.EF;
+using DAL.EF.Models;
 using DAL.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -8,11 +9,28 @@ using System.Threading.Tasks;
 
 namespace DAL.Repo
 {
-    internal class DoctorRepo : IRepo<Doctor, int, Doctor>
+    internal class DoctorRepo :Repo, IRepo<Doctor, int, Doctor>,Auth<Doctor,int>
     {
+        
         public Doctor Add(Doctor obj)
         {
-            throw new NotImplementedException();
+            db.Doctors.Add(obj);
+            if (db.SaveChanges() > 0)
+            {
+                return obj;
+            }return null;
+        }
+
+        public Doctor Doctors(string name)
+        {
+            var obj = db.Doctors.FirstOrDefault(x => x.Name.Equals(name));
+            return obj;
+        }
+
+        public Doctor Authenticate(string Email, string password)
+        {
+            var obj = db.Doctors.FirstOrDefault(x => x.Email.Equals(Email) && x.Password.Equals(password));
+            return obj;
         }
 
         public bool Delete(Doctor obj)
@@ -22,17 +40,25 @@ namespace DAL.Repo
 
         public List<Doctor> Get()
         {
-            throw new NotImplementedException();
+            return db.Doctors.ToList();
         }
 
         public Doctor Get(int id)
         {
-            throw new NotImplementedException();
+            return db.Doctors.Find(id);
         }
 
         public Doctor Update(Doctor obj)
         {
-            throw new NotImplementedException();
+            var data=Get(obj.ID);
+            db.Entry(data).CurrentValues.SetValues(obj);
+            if (db.SaveChanges() > 0)
+            {
+                return obj;
+            }
+            return null;
         }
+
+        
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Services.Protocols;
 
 namespace Health_Care_360_
 {
@@ -13,12 +14,18 @@ namespace Health_Care_360_
 
             // Web API routes
             config.MapHttpAttributeRoutes();
-
+            config.EnableCors();
+            config.Routes.MapHttpRoute(
+               name: "route1",
+               routeTemplate: "api/{controller}/{name}",
+               defaults: new {name = @"^[a-zA-Z]" }
+           );
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+           
         }
     }
 }
