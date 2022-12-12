@@ -9,6 +9,7 @@ namespace DAL.EF.Models
 {
     public class Patient
     {
+        
         public int ID { get; set; }
         [Required]
         [StringLength(50)]
@@ -32,13 +33,18 @@ namespace DAL.EF.Models
         [Required]
         [StringLength(50)]
         public string BloodGroup { get; set; }
+        [Required]
+        [StringLength(50)]
+        public string Description { get; set; }
 
         public Patient()
         {
-            this.HospitalPatients = new List<HospitalPatient>();
-            this.DoctorPatients = new List<DoctorPatient>();
+            /*this.HospitalPatients = new List<HospitalPatient>();
+            this.DoctorPatients = new List<DoctorPatient>();*/
+            this.Appointments = new List<Appointment>();
         }
-        public virtual List<HospitalPatient> HospitalPatients { get; set; }
-        public virtual List<DoctorPatient> DoctorPatients { get; set; }
+        public virtual List<Appointment> Appointments { get; set; }
+        /*public virtual List<HospitalPatient> HospitalPatients { get; set; }
+        public virtual List<DoctorPatient> DoctorPatients { get; set; }*/
     }
 }

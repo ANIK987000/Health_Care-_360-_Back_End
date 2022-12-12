@@ -17,6 +17,10 @@ namespace DAL
         {
             return new DoctorRepo();
         }
+        public static Auth<Doctor,int> DoctorAuthDataAccess()
+        {
+            return new DoctorRepo();
+        }
         public static IRepo<Patient, int, Patient> PatientDataAccess()
         {
             return new PatientRepo();
@@ -29,6 +33,31 @@ namespace DAL
         {
             return new StaffRepo();
         }
+        public static IRepo<Appointment,int,Appointment> AppointmentDataAccess()
+        {
+            return new AppointmentRepo();
+        }
+        public static IRepo<Token, string, Token> TokenDataAccess()
+        {
+            return new TokenRepo();
+        }
+        public static Appointment<Appointment,int> NewAppointmentDataAccess()
+        {
+            return new AppointmentRepo();
+        }
+        public static IRepo<PatientCheckUp, int,PatientCheckUp> PatientCheckUpDataAccess()
+        {
+            return new PatientCheckUpRepo();
+        }
+        public static IRepo<Medicine, int, Medicine> MedicineDataAccess()
+        {
+            return new MedicineRepo();
+        }
+        public static CheckUp CheckupDataAccess()
+        {
+            return new PatientCheckUpRepo();
+        }
+
         //public static IAuth AuthDataAccess()
         //{
         //    return new UserRepo();

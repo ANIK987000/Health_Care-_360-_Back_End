@@ -31,7 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.10.0.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,14 +46,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DTOs\AppointmentDTO.cs" />
+    <Compile Include="DTOs\MedicineDTO.cs" />
     <Compile Include="DTOs\DoctorDTO.cs" />
     <Compile Include="DTOs\HospitalDTO.cs" />
+    <Compile Include="DTOs\LoginDTO.cs" />
+    <Compile Include="DTOs\PatientCheckUpDTO.cs" />
     <Compile Include="DTOs\PatientDTO.cs" />
     <Compile Include="DTOs\StaffDTO.cs" />
+    <Compile Include="DTOs\TokenDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AppointMentService.cs" />
+    <Compile Include="Services\AuthService.cs" />
     <Compile Include="Services\DoctorService.cs" />
     <Compile Include="Services\HospitalService.cs" />
+    <Compile Include="Services\MedicineService.cs" />
+    <Compile Include="Services\PatientCheckUpService.cs" />
     <Compile Include="Services\PatientService.cs" />
+    <Compile Include="Services\Service.cs" />
     <Compile Include="Services\StaffService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +71,9 @@
       <Project>{792031b9-ab31-4270-a1a3-cbd6c326672d}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

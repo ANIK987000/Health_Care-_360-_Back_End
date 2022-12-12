@@ -8,11 +8,15 @@ using System.Threading.Tasks;
 
 namespace DAL.Repo
 {
-    internal class PatientRepo : IRepo<Patient, int, Patient>
+    internal class PatientRepo :Repo, IRepo<Patient, int, Patient>
     {
         public Patient Add(Patient obj)
         {
-            throw new NotImplementedException();
+            db.Patients.Add(obj);
+            if (db.SaveChanges() > 0)
+            {
+                return obj;
+            }return null;
         }
 
         public bool Delete(Patient obj)
@@ -27,7 +31,7 @@ namespace DAL.Repo
 
         public Patient Get(int id)
         {
-            throw new NotImplementedException();
+            return db.Patients.Find(id);
         }
 
         public Patient Update(Patient obj)

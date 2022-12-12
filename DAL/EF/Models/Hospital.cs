@@ -23,12 +23,12 @@ namespace DAL.EF.Models
         [StringLength(50)]
         public string Location { get; set; }
 
-        public Hospital()
+        /*public Hospital()
         {
             this.HospitalDoctors = new List<HospitalDoctor>();
             this.HospitalStaffs = new List<HospitalStaff>();
         }
         public virtual List<HospitalDoctor> HospitalDoctors { get; set; }
-        public virtual List<HospitalStaff> HospitalStaffs { get; set; }
+        public virtual List<HospitalStaff> HospitalStaffs { get; set; }*/
     }
 }

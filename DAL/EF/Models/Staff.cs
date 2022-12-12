@@ -28,11 +28,11 @@ namespace DAL.EF.Models
         public string Address { get; set; }
 
 
-        public Staff()
+        /*public Staff()
         {
             this.HospitalDoctors = new List<HospitalDoctor>();
         }
-        public virtual List<HospitalDoctor> HospitalDoctors { get; set; }
+        public virtual List<HospitalDoctor> HospitalDoctors { get; set; }*/
 
     }
 }
