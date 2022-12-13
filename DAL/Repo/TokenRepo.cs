@@ -20,7 +20,7 @@ namespace DAL.Repo
             return null;
         }
 
-        public bool Delete(Token obj)
+        public bool Delete(/*Token obj*/string id)
         {
             throw new NotImplementedException();
         }

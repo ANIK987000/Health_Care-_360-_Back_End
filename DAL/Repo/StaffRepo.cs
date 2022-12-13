@@ -9,31 +9,52 @@ using System.Threading.Tasks;
 
 namespace DAL.Repo
 {
-    internal class StaffRepo : IRepo<Staff, int, Staff>
+    internal class StaffRepo :Repo, IRepo<Staff, int, Staff>
     {
         public Staff Add(Staff obj)
         {
-            throw new NotImplementedException();
+            db.Staffs.Add(obj);
+            if(db.SaveChanges()>0)
+            {
+                return obj;
+            }
+            return null;
         }
 
-        public bool Delete(Staff obj)
+        public bool Delete(/*Staff obj*/ int id)
         {
-            throw new NotImplementedException();
+
+            //var data = Get(obj.ID);
+            var data = db.Staffs.Find(id);
+            db.Staffs.Remove(data);
+            if(db.SaveChanges()>0)
+            {
+                return true;
+            }
+            return false;
+
         }
 
         public List<Staff> Get()
         {
-            throw new NotImplementedException();
+            return db.Staffs.ToList();
         }
 
         public Staff Get(int id)
         {
-            throw new NotImplementedException();
+            var data= db.Staffs.Find(id);
+            return data;
         }
 
         public Staff Update(Staff obj)
         {
-            throw new NotImplementedException();
+            var data= Get(obj.ID);
+            db.Entry(data).CurrentValues.SetValues(obj);
+            if(db.SaveChanges()>0)
+            {
+                return obj;
+            }
+            return null;
         }
     }
 }

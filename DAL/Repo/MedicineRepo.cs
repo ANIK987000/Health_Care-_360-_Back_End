@@ -20,7 +20,7 @@ namespace DAL.Repo
             return null;
         }
 
-        public bool Delete(Medicine obj)
+        public bool Delete(/*Medicine obj*/int id)
         {
             throw new NotImplementedException();
         }

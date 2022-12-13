@@ -37,5 +37,31 @@ namespace BLL.Services
             var access = DataAccessFactory.PatientDataAccess().Get(id);
             return mapper.Map<PatientDTO>(access);
         }
+
+        public static bool Delete(/*PatientDTO patient*/int id)
+        {
+            //var config = Service.OneTimeMapping<Patient, PatientDTO>();
+            //var mapper = new Mapper(config);
+            //var patients = mapper.Map<Patient>(patient);
+            var data = DataAccessFactory.PatientDataAccess().Delete(/*patients*/id);
+            return data;
+
+        }
+
+
+        public static PatientDTO Update(PatientDTO patientDTO)
+        {
+            var config = Service.Mapping<Patient, PatientDTO>();
+            var mapper = new Mapper(config);
+            var patient = mapper.Map<Patient>(patientDTO);
+            var data = DataAccessFactory.PatientDataAccess().Update(patient);
+            if (data != null)
+            {
+                return mapper.Map<PatientDTO>(data);
+            }
+
+            return null;
+
+        }
     }
 }

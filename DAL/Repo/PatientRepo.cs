@@ -16,17 +16,25 @@ namespace DAL.Repo
             if (db.SaveChanges() > 0)
             {
                 return obj;
-            }return null;
+            }
+            return null;
         }
 
-        public bool Delete(Patient obj)
+        public bool Delete(/*Patient obj*/ int id)
         {
-            throw new NotImplementedException();
+            //var data = Get(obj.ID);
+            var data = db.Patients.Find(id);
+            db.Patients.Remove(data);
+            if(db.SaveChanges()>0)
+            {
+                return true;
+            }
+            return false;
         }
 
         public List<Patient> Get()
         {
-            throw new NotImplementedException();
+            return db.Patients.ToList();
         }
 
         public Patient Get(int id)
@@ -36,7 +44,13 @@ namespace DAL.Repo
 
         public Patient Update(Patient obj)
         {
-            throw new NotImplementedException();
+            var data=Get(obj.ID);
+            db.Entry(data).CurrentValues.SetValues(obj);
+            if(db.SaveChanges()>0)
+            {
+                return obj;
+            }
+            return null;
         }
     }
 }

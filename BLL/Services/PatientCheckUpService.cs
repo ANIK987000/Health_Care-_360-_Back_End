@@ -44,13 +44,14 @@ namespace BLL.Services
             var send = DataAccessFactory.CheckupDataAccess().Get(access.DoctorName);
             return mapper.Map<PatientCheckUpDTO>(send);
         }
-        public static PatientCheckUpDTO Delete(PatientCheckUpDTO patientCheck)
+        public static /*PatientCheckUpDTO*/bool Delete(/*PatientCheckUpDTO patientCheck*/int id)
         {
-            var cfg=Service.OneTimeMapping<PatientCheckUp, PatientCheckUpDTO>();
-            var mapper = new Mapper(cfg);
-            var data=mapper.Map<PatientCheckUp>(patientCheck);   
-            var access = DataAccessFactory.PatientCheckUpDataAccess().Delete(data);
-            return mapper.Map<PatientCheckUpDTO>(access);
+            //var cfg=Service.OneTimeMapping<PatientCheckUp, PatientCheckUpDTO>();
+            //var mapper = new Mapper(cfg);
+            //var data=mapper.Map<PatientCheckUp>(patientCheck);   
+            var access = DataAccessFactory.PatientCheckUpDataAccess().Delete(/*data*/id);
+            return access;
+            //return mapper.Map<PatientCheckUpDTO>(access);
         }
         public static PatientCheckUpDTO Update(PatientCheckUpDTO patientCheck)
         {

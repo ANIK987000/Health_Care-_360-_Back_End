@@ -15,7 +15,7 @@ namespace DAL.Repo
             throw new NotImplementedException();
         }
 
-        public bool Delete(Hospital obj)
+        public bool Delete(/*Hospital obj*/int id)
         {
             throw new NotImplementedException();
         }

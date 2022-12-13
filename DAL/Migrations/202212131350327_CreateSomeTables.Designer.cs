@@ -7,13 +7,13 @@ namespace DAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class AddingNotNull : IMigrationMetadata
+    public sealed partial class CreateSomeTables : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddingNotNull));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CreateSomeTables));
         
         string IMigrationMetadata.Id
         {
-            get { return "202211291501083_AddingNotNull"; }
+            get { return "202212131350327_CreateSomeTables"; }
         }
         
         string IMigrationMetadata.Source

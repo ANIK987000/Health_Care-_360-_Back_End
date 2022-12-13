@@ -18,7 +18,8 @@ namespace DAL.Repo
             if (db.SaveChanges() > 0)
             {
                 return obj;
-            }return null;
+            }
+            return null;
         }
 
         public Doctor Doctors(string name)
@@ -33,9 +34,16 @@ namespace DAL.Repo
             return obj;
         }
 
-        public bool Delete(Doctor obj)
+        public bool Delete(/*Doctor obj */int id)
         {
-            throw new NotImplementedException();
+            //var data=Get(obj.ID);
+            var data = db.Doctors.Find(id);
+            db.Doctors.Remove(data);
+            if(db.SaveChanges()>0)
+            {
+                return true;
+            }
+            return false;
         }
 
         public List<Doctor> Get()

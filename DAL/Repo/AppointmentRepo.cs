@@ -19,9 +19,10 @@ namespace DAL.Repo
             }return null;
         }
 
-        public bool Delete(Appointment obj)
+        public bool Delete(/*Appointment obj*/int id)
         {
-            var data = Get(obj.Id);
+            //var data = Get(obj.Id);
+            var data = db.Appointments.Find(id);
             db.Appointments.Remove(data);
             if (db.SaveChanges() > 0)
             {
