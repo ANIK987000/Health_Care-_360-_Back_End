@@ -20,10 +20,11 @@ namespace DAL.Repo
             return null;
         }
 
-        public bool Delete(PatientCheckUp obj)
+        public bool Delete(/*PatientCheckUp obj*/int id)
         {
-            var data = Get(obj.ID);
-            db.patientCheckUps.Remove(obj);
+            //var data = Get(obj.ID);
+            var data = db.patientCheckUps.Find(id);
+            db.patientCheckUps.Remove(data);
             if(db.SaveChanges() > 0)
             {
                 return true;

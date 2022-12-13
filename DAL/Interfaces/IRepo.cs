@@ -11,7 +11,7 @@ namespace DAL.Interfaces
         List<CLASS> Get();
         CLASS Get(ID id);
         RETURNTYPE Add(CLASS obj);
-        bool Delete(CLASS obj);
+        bool Delete(/*CLASS obj*/ ID id);
         RETURNTYPE Update(CLASS obj);
     }
 }

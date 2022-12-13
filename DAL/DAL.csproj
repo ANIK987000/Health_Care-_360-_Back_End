@@ -66,33 +66,9 @@
     <Compile Include="Interfaces\Auth.cs" />
     <Compile Include="Interfaces\CheckUp.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
-    <Compile Include="Migrations\202211291443248_CreateFourDHPSTables.cs" />
-    <Compile Include="Migrations\202211291443248_CreateFourDHPSTables.designer.cs">
-      <DependentUpon>202211291443248_CreateFourDHPSTables.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202211291501083_AddingNotNull.cs" />
-    <Compile Include="Migrations\202211291501083_AddingNotNull.designer.cs">
-      <DependentUpon>202211291501083_AddingNotNull.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212060845143_CreateAppointment.cs" />
-    <Compile Include="Migrations\202212060845143_CreateAppointment.designer.cs">
-      <DependentUpon>202212060845143_CreateAppointment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212081648044_CreateToken.cs" />
-    <Compile Include="Migrations\202212081648044_CreateToken.designer.cs">
-      <DependentUpon>202212081648044_CreateToken.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212111626204_CreatePatientChekupList1.cs" />
-    <Compile Include="Migrations\202212111626204_CreatePatientChekupList1.designer.cs">
-      <DependentUpon>202212111626204_CreatePatientChekupList1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212111736102_CreateMedPrescriptionTable.cs" />
-    <Compile Include="Migrations\202212111736102_CreateMedPrescriptionTable.designer.cs">
-      <DependentUpon>202212111736102_CreateMedPrescriptionTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212112154534_updateAppCheckMedicine.cs" />
-    <Compile Include="Migrations\202212112154534_updateAppCheckMedicine.designer.cs">
-      <DependentUpon>202212112154534_updateAppCheckMedicine.cs</DependentUpon>
+    <Compile Include="Migrations\202212131350327_CreateSomeTables.cs" />
+    <Compile Include="Migrations\202212131350327_CreateSomeTables.designer.cs">
+      <DependentUpon>202212131350327_CreateSomeTables.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,26 +87,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202211291443248_CreateFourDHPSTables.resx">
-      <DependentUpon>202211291443248_CreateFourDHPSTables.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211291501083_AddingNotNull.resx">
-      <DependentUpon>202211291501083_AddingNotNull.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212060845143_CreateAppointment.resx">
-      <DependentUpon>202212060845143_CreateAppointment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212081648044_CreateToken.resx">
-      <DependentUpon>202212081648044_CreateToken.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212111626204_CreatePatientChekupList1.resx">
-      <DependentUpon>202212111626204_CreatePatientChekupList1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212111736102_CreateMedPrescriptionTable.resx">
-      <DependentUpon>202212111736102_CreateMedPrescriptionTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212112154534_updateAppCheckMedicine.resx">
-      <DependentUpon>202212112154534_updateAppCheckMedicine.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202212131350327_CreateSomeTables.resx">
+      <DependentUpon>202212131350327_CreateSomeTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

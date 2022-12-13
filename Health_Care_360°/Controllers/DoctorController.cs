@@ -17,14 +17,14 @@ namespace Health_Care_360_.Controllers
     {
         
         [HttpPost]
-        [Route("api/Doctor/Register")]
+        [Route("api/doctor/register")]
         public HttpResponseMessage Register(DoctorDTO doctor)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    var data = DoctorService.ADD(doctor);
+                    var data = DoctorService.Add(doctor);
                     return Request.CreateResponse(HttpStatusCode.OK, data);
                 }
                 return Request.CreateResponse(HttpStatusCode.NoContent);
@@ -35,6 +35,95 @@ namespace Health_Care_360_.Controllers
             }                       
            
         }
+
+
+
+
+        [HttpGet]
+        [Route("api/doctor/get/all")]
+        public HttpResponseMessage GetAllDoctors()
+        {
+            try
+            {
+                var data = DoctorService.Get();
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+            }
+
+
+        }
+
+        [HttpGet]
+        [Route("api/doctor/get/{id}")]
+        public HttpResponseMessage GetSingleDoctor(int id)
+        {
+            try
+            {
+                var data = DoctorService.Get(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+            }
+
+
+        }
+
+
+        [HttpPost]
+        [Route("api/doctor/delete/{id}")]
+        public HttpResponseMessage DeleteDoctors(/*DoctorDTO doctor*/ int id)
+        {
+            try
+            {
+                var data = DoctorService.Delete(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+            }
+
+
+        }
+
+
+        [HttpPost]
+        [Route("api/doctor/update")]
+        public HttpResponseMessage UpdateDoctors(DoctorDTO doctor)
+        {
+            try
+            {
+                var data = DoctorService.Update(doctor);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        //____________________________________________________________________
+
+
+
         [Logged]
         [HttpGet]
         [Route("api/Doctor/Patients")]

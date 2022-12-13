@@ -53,3 +53,17 @@ E:\Project Backup\Health CARE 360\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cac
 E:\Project Backup\Health CARE 360\DAL\obj\Debug\DAL.csproj.CopyComplete
 E:\Project Backup\Health CARE 360\DAL\obj\Debug\DAL.dll
 E:\Project Backup\Health CARE 360\DAL\obj\Debug\DAL.pdb
+E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\Health_Care-_360-_Back_End\DAL\bin\Debug\DAL.dll.config
+E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\Health_Care-_360-_Back_End\DAL\bin\Debug\DAL.dll
+E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\Health_Care-_360-_Back_End\DAL\bin\Debug\DAL.pdb
+E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\Health_Care-_360-_Back_End\DAL\bin\Debug\EntityFramework.dll
+E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\Health_Care-_360-_Back_End\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\Health_Care-_360-_Back_End\DAL\bin\Debug\EntityFramework.xml
+E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\Health_Care-_360-_Back_End\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\Health_Care-_360-_Back_End\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\Health_Care-_360-_Back_End\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\Health_Care-_360-_Back_End\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\Health_Care-_360-_Back_End\DAL\obj\Debug\DAL.dll
+E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\Health_Care-_360-_Back_End\DAL\obj\Debug\DAL.pdb
+E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\Health_Care-_360-_Back_End\DAL\obj\Debug\DAL.Migrations.CreateSomeTables.resources
+E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\Health_Care-_360-_Back_End\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
