@@ -6,14 +6,16 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Health_Care_360_.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class StaffController : ApiController
     {
 
         [HttpPost]
-        [Route("api/staff/register")]
+        [Route("api/staff/add")]
         public HttpResponseMessage Register(StaffDTO staffDTO)
         {
             try
@@ -36,7 +38,7 @@ namespace Health_Care_360_.Controllers
 
 
         [HttpGet]
-        [Route("api/staff/get/all")]
+        [Route("api/staff/list")]
         public HttpResponseMessage GetAllStaffs()
         {
             try
@@ -53,16 +55,19 @@ namespace Health_Care_360_.Controllers
         }
 
         [HttpGet]
-        [Route("api/staff/get/{id}")]
+        [Route("api/staff/{id}")]
         public HttpResponseMessage GetSingleStaff(int id)
         {
             try
             {
                 var data = StaffService.Get(id);
+             
+                
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
             {
+                //var err = "No staff found";
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
             }
 

@@ -16,7 +16,7 @@ namespace BLL.DTOs
         public string Address { get; set; }    
         public string Dob { get; set; }    
         public string BloodGroup { get; set; }    
-        public string Description { get; set; }
+        public string Disease { get; set; }
 
     }
 }

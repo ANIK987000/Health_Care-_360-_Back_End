@@ -17,7 +17,7 @@ namespace Health_Care_360_.Controllers
     {
         
         [HttpPost]
-        [Route("api/doctor/register")]
+        [Route("api/doctor/add")]
         public HttpResponseMessage Register(DoctorDTO doctor)
         {
             try
@@ -40,7 +40,7 @@ namespace Health_Care_360_.Controllers
 
 
         [HttpGet]
-        [Route("api/doctor/get/all")]
+        [Route("api/doctor/list")]
         public HttpResponseMessage GetAllDoctors()
         {
             try

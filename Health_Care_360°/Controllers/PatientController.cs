@@ -6,14 +6,16 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Health_Care_360_.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class PatientController : ApiController
     {
 
         [HttpPost]
-        [Route("api/patient/register")]
+        [Route("api/patient/add")]
         public HttpResponseMessage Register(PatientDTO patient)
         {
             try
@@ -33,7 +35,7 @@ namespace Health_Care_360_.Controllers
         }
 
         [HttpGet]
-        [Route("api/patient/get/all")]
+        [Route("api/patient/list")]
         public HttpResponseMessage GetAllPatients()
         {
             try
@@ -50,7 +52,7 @@ namespace Health_Care_360_.Controllers
         }
 
         [HttpGet]
-        [Route("api/patient/get/{id}")]
+        [Route("api/patient/{id}")]
         public HttpResponseMessage GetSinglePatient(int id)
         {
             try
