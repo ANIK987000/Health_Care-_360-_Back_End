@@ -77,6 +77,10 @@
     <Compile Include="Migrations\202212161912142_CreateBedCategoryandAllotments.designer.cs">
       <DependentUpon>202212161912142_CreateBedCategoryandAllotments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212210758238_AddSomeColumns.cs" />
+    <Compile Include="Migrations\202212210758238_AddSomeColumns.designer.cs">
+      <DependentUpon>202212210758238_AddSomeColumns.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repo\AppointmentRepo.cs" />
@@ -103,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212161912142_CreateBedCategoryandAllotments.resx">
       <DependentUpon>202212161912142_CreateBedCategoryandAllotments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212210758238_AddSomeColumns.resx">
+      <DependentUpon>202212210758238_AddSomeColumns.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

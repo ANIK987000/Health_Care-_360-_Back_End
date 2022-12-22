@@ -14,7 +14,7 @@ namespace Health_Care_360_
 
             // Web API routes
             config.MapHttpAttributeRoutes();
-            config.EnableCors();
+           
             config.Routes.MapHttpRoute(
                name: "route1",
                routeTemplate: "api/{controller}/{name}",
@@ -25,7 +25,8 @@ namespace Health_Care_360_
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-           
+            config.EnableCors();
+
         }
     }
 }

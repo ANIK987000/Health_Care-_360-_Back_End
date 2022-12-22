@@ -35,7 +35,7 @@ namespace DAL.EF.Models
         public string BloodGroup { get; set; }
         [Required]
         [StringLength(50)]
-        public string Description { get; set; }
+        public string Disease { get; set; }
         public Patient()
         {
             /*this.HospitalPatients = new List<HospitalPatient>();

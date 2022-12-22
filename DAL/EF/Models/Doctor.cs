@@ -30,6 +30,14 @@ namespace DAL.EF.Models
         [StringLength(50)]
         public string Qualification { get; set; }
 
+        [Required]
+        [StringLength(50)]
+        public string VisitingHours { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string AppointmentFee { get; set; }
+
 
         public Doctor() 
         {
