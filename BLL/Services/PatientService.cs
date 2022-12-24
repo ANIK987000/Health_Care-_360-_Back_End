@@ -63,5 +63,16 @@ namespace BLL.Services
             return null;
 
         }
+
+        //__________________________________________
+
+
+        public static PatientDTO GetChecker(string name)
+        {
+            var data = DataAccessFactory.PatientAuthCheckerDataAccess().GetChecker(name);
+            var config = Service.OneTimeMapping<Patient, PatientDTO>();
+            var mapper = new Mapper(config);
+            return mapper.Map<PatientDTO>(data);
+        }
     }
 }

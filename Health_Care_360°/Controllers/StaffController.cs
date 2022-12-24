@@ -1,5 +1,6 @@
 ﻿using BLL.DTOs;
 using BLL.Services;
+using Health_Care_360_.Auth;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ using System.Web.Http.Cors;
 namespace Health_Care_360_.Controllers
 {
     [EnableCors("*", "*", "*")]
+    //[Logged]
     public class StaffController : ApiController
     {
 
@@ -111,6 +113,22 @@ namespace Health_Care_360_.Controllers
         }
 
 
+        [HttpGet]
+        [Route("api/staff/get/{email}")]
+        public HttpResponseMessage GetSingleStaffByEmail(string email)
+        {
+            try
+            {
+                var data = StaffService.GetChecker(email);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+            }
+
+
+        }
 
 
 

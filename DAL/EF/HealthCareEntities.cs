@@ -13,7 +13,8 @@ namespace DAL.EF
         public DbSet<Doctor> Doctors { get; set; }
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Staff> Staffs { get; set; }
-        public DbSet<Hospital> Hospitals { get; set; }
+        public DbSet<Admin> Admins { get; set; }
+        public DbSet<NoticeBoard> NoticeBoards { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<Token> Tokens { get; set; }
         public DbSet<PatientCheckUp> patientCheckUps { get; set; }

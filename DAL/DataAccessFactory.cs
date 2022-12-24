@@ -13,6 +13,7 @@ namespace DAL
 {
     public class DataAccessFactory
     {
+        //_________________________________________
         public static IRepo<Doctor, int, Doctor> DoctorDataAccess()
         {
             return new DoctorRepo();
@@ -21,18 +22,70 @@ namespace DAL
         {
             return new DoctorRepo();
         }
+
+        public static AuthChecker<Doctor, string> DoctorAuthCheckerDataAccess()
+        {
+            return new DoctorRepo();
+        }
+        
+        public static QualicationCount<Doctor,string> DoctorQualicationCountDataAccess()
+        {
+            return new DoctorRepo();
+        }
+
+        //_______________________________________
         public static IRepo<Patient, int, Patient> PatientDataAccess()
         {
             return new PatientRepo();
         }
-        public static IRepo<Hospital, int, Hospital> HospitalDataAccess()
+        public static Auth<Patient, int> PatientAuthDataAccess()
         {
-            return new HospitalRepo();
+            return new PatientRepo();
         }
+
+        public static AuthChecker<Patient, string> PatientAuthCheckerDataAccess()
+        {
+            return new PatientRepo();
+        }
+
+        //______________________________________________
+        public static IRepo<Admin, int, Admin> AdminDataAccess()
+        {
+            return new AdminRepo();
+        }
+        public static Auth<Admin, int> AdminAuthDataAccess()
+        {
+            return new AdminRepo();
+        }
+
+        public static AuthChecker<Admin, string> AdminAuthCheckerDataAccess()
+        {
+            return new AdminRepo();
+        }
+
+        //_____________________________________________
         public static IRepo<Staff, int, Staff> StaffDataAccess()
         {
             return new StaffRepo();
         }
+        public static Auth<Staff, int> StaffAuthDataAccess()
+        {
+            return new StaffRepo();
+        }
+
+        public static AuthChecker<Staff, string> StaffAuthCheckerDataAccess()
+        {
+            return new StaffRepo();
+        }
+
+        //__________________________________________________
+
+        public static IRepo<NoticeBoard,int,NoticeBoard> NoticeBoardDataAccess()
+        {
+            return new NoticeBoardRepo();
+        }
+
+        //______________________________________________________
         public static IRepo<Appointment,int,Appointment> AppointmentDataAccess()
         {
             return new AppointmentRepo();
