@@ -52,8 +52,9 @@
     <Compile Include="DTOs\BedDTO.cs" />
     <Compile Include="DTOs\MedicineDTO.cs" />
     <Compile Include="DTOs\DoctorDTO.cs" />
-    <Compile Include="DTOs\HospitalDTO.cs" />
+    <Compile Include="DTOs\AdminDTO.cs" />
     <Compile Include="DTOs\LoginDTO.cs" />
+    <Compile Include="DTOs\NoticeBoardDTO.cs" />
     <Compile Include="DTOs\PatientCheckUpDTO.cs" />
     <Compile Include="DTOs\PatientDTO.cs" />
     <Compile Include="DTOs\StaffDTO.cs" />
@@ -64,8 +65,9 @@
     <Compile Include="Services\BedService.cs" />
     <Compile Include="Services\BedAllotmentService.cs" />
     <Compile Include="Services\DoctorService.cs" />
-    <Compile Include="Services\HospitalService.cs" />
+    <Compile Include="Services\AdminService.cs" />
     <Compile Include="Services\MedicineService.cs" />
+    <Compile Include="Services\NoticeBoardService.cs" />
     <Compile Include="Services\PatientCheckUpService.cs" />
     <Compile Include="Services\PatientService.cs" />
     <Compile Include="Services\Service.cs" />

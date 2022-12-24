@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL.DTOs
+namespace DAL.Interfaces
 {
-    public class HospitalDTO
+    public interface AuthChecker<CLASS,ID>
     {
+        CLASS GetChecker(ID id);
     }
 }

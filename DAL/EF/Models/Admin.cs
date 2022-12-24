@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL.EF.Models
 {
-    public class Hospital
+    public class Admin
     {
         public int ID { get; set; }
         [Required]
@@ -21,7 +21,11 @@ namespace DAL.EF.Models
         public string Password { get; set; }
         [Required]
         [StringLength(50)]
-        public string Location { get; set; }
+        public string Phone { get; set; }
+        [Required]
+        [StringLength(50)]
+
+        public string Address { get; set; }
 
         /*public Hospital()
         {

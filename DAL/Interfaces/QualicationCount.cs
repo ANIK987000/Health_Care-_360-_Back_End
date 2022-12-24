@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL.Services
+namespace DAL.Interfaces
 {
-    public class HospitalService
+    public interface QualicationCount<CLASS,ID>
     {
+        List<CLASS> GetQualicationCount(ID id);
     }
 }

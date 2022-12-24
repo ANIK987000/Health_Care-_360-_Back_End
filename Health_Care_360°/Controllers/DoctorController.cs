@@ -13,6 +13,7 @@ using System.Xml.Linq;
 namespace Health_Care_360_.Controllers
 {
     [EnableCors("*","*","*")]
+   // [Logged]
     public class DoctorController : ApiController
     {
         
@@ -57,7 +58,7 @@ namespace Health_Care_360_.Controllers
         }
 
         [HttpGet]
-        [Route("api/doctor/get/{id}")]
+        [Route("api/doctor/got/{id}")]
         public HttpResponseMessage GetSingleDoctor(int id)
         {
             try
@@ -109,9 +110,27 @@ namespace Health_Care_360_.Controllers
 
         }
 
+       
 
 
 
+
+        [HttpGet]
+        [Route("api/doctor/get/{email}")]
+        public HttpResponseMessage GetSingleDoctorByEmail(string email)
+        {
+            try
+            {
+                var data = DoctorService.GetChecker(email);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+            }
+
+
+        }
 
 
 
