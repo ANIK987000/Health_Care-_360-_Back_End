@@ -13,12 +13,13 @@ namespace Health_Care_360_
             // Web API configuration and services
 
             // Web API routes
+
             config.MapHttpAttributeRoutes();
             config.EnableCors();
             config.Routes.MapHttpRoute(
                name: "route1",
                routeTemplate: "api/{controller}/{name}",
-               defaults: new {name = @"^[a-zA-Z]" }
+               defaults: new {name = RouteParameter.Optional }
            );
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

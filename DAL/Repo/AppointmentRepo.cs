@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repo
 {
-    internal class AppointmentRepo : Repo, IRepo<Appointment, int, Appointment>,ListofID<Appointment,int>
+    internal class AppointmentRepo : Repo, IRepo<Appointment, int, Appointment>,ListofID<Appointment>
     {
         public Appointment Add(Appointment obj)
         {
@@ -54,7 +54,12 @@ namespace DAL.Repo
 
         public List<Appointment> GetListOfId(int id)
         {
-            return db.Appointments.Where(x => x.DoctorID == id).ToList();
+            return db.Appointments.Where(x => x.ScheduleID.Equals(id)).ToList();
+        }
+
+        public Appointment GetCategory(string ret)
+        {
+            throw new NotImplementedException();
         }
     }
 }

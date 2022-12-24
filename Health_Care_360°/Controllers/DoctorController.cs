@@ -144,11 +144,11 @@ namespace Health_Care_360_.Controllers
         [Logged]
         [HttpGet]
         [Route("api/Doctor/{name}")]
-        public HttpResponseMessage AllAppointment(string name)
+        public HttpResponseMessage Schedule(string name)
         {
             try
             {
-                var data = AppointMentService.ShowAppointments(name);
+                var data = DoctorScheduleService.Get(name);
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch(Exception ex)
@@ -159,13 +159,28 @@ namespace Health_Care_360_.Controllers
             
         }
         [Logged]
+        [Route("api/Doctor/Appointment/{id}")]
         [HttpGet]
-        [Route("api/Doctor/{name}/{id}")]
-        public HttpResponseMessage AddAppointment(int id)
+        public HttpResponseMessage GetAppointments(int id)
         {
             try
             {
-                var data = PatientService.Get(id);
+                var data = AppointMentService.ShowAppointments(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch(Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.ExpectationFailed, ex);
+            }
+        }
+        [Logged]
+        [HttpGet]
+        [Route("api/Doctor/AddAppointment/{name}")]
+        public HttpResponseMessage AddAppointment()
+        {
+            try
+            {
+                var data = PatientService.Get();
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
@@ -177,7 +192,7 @@ namespace Health_Care_360_.Controllers
         }
         [Logged]
         [HttpPost]
-        [Route("api/Doctor/{name}/{id}")]
+        [Route("api/Doctor/AddAppointment/{name}")]
         public HttpResponseMessage AddAppointment(AppointmentDTO appointment,string name)
         {
             try

@@ -62,3 +62,6 @@ E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\Health_Car
 E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\Health_Care-_360-_Back_End\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
 E:\Project\Health_Care-_360-_Back_End\DAL\obj\Debug\DAL.Migrations.CreateSomeTables.resources
 E:\Project\Health_Care-_360-_Back_End\DAL\obj\Debug\DAL.Migrations.CreateBedCategoryandAllotments.resources
+E:\Project\Health_Care-_360-_Back_End\DAL\obj\Debug\DAL.Migrations.updateTable.resources
+E:\Project\Health_Care-_360-_Back_End\DAL\obj\Debug\DAL.Migrations.updateTable1.resources
+E:\Project\Health_Care-_360-_Back_End\DAL\obj\Debug\DAL.Migrations.CreateScheduleTable.resources

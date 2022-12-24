@@ -18,6 +18,7 @@ namespace BLL.Services
             var mapper = new Mapper(config);
             var data = DataAccessFactory.DoctorAuthDataAccess().Doctors(name);
             var addappointment = new Appointment();
+            addappointment.ScheduleID=appointment.ScheduleID;
             addappointment.PatientID=appointment.PatientID;
             addappointment.PatientName= appointment.PatientName;
             addappointment.AppointCreateDate= DateTime.Now;
@@ -30,10 +31,9 @@ namespace BLL.Services
                 return mapper.Map<AppointmentDTO>(access);
             }return null;
         }
-        public static List<AppointmentDTO> ShowAppointments(string name)
+        public static List<AppointmentDTO> ShowAppointments(int id)
         {
-                var data = DataAccessFactory.DoctorAuthDataAccess().Doctors(name);
-                var appDoc = DataAccessFactory.NewAppointmentDataAccess().GetListOfId(data.ID);
+                var appDoc = DataAccessFactory.NewAppointmentDataAccess().GetListOfId(id);
                 var config = Service.OneTimeMapping<Appointment, AppointmentDTO>();
                 var mapper = new Mapper(config);             
                 return mapper.Map<List<AppointmentDTO>>(appDoc);          

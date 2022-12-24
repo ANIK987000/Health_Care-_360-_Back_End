@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace DAL.Interfaces
 {
-    public interface ListofID<CLASS,RET>
+    public interface ListofID<CLASS>
     {
         List<CLASS> GetListOfId(int id);
+        CLASS GetCategory(string ret);
         
     }
 }

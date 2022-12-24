@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repo
 {
-    internal class BedAllotmentRepo : Repo, IRepo<BedAllotment, int, BedAllotment>
+    internal class BedAllotmentRepo : Repo, IRepo<BedAllotment, int, BedAllotment>, Schedule<BedAllotment,Bed>
     {
         public BedAllotment Add(BedAllotment obj)
         {
@@ -38,6 +38,16 @@ namespace DAL.Repo
         public BedAllotment Get(int id)
         {
             return db.BedAllotments.Find(id);
+        }
+
+        public BedAllotment GetData(List<Bed> id)
+        {
+            BedAllotment result=new BedAllotment();
+            foreach(var item in id)
+            {
+                 result= db.BedAllotments.SingleOrDefault(X => X.BedID.Equals(item));
+            }
+            return result;
         }
 
         public BedAllotment Update(BedAllotment obj)

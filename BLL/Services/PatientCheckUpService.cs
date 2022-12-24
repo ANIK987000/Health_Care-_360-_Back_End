@@ -18,6 +18,7 @@ namespace BLL.Services
             var mapper = new Mapper(cfg);
             var data = DataAccessFactory.AppointmentDataAccess().Get(id);
             var check = new PatientCheckUp();
+            check.AppointMentID = data.Id;
             check.PatientID=data.PatientID;
             check.PatientName=data.PatientName;
             check.DoctorID=data.DoctorID;

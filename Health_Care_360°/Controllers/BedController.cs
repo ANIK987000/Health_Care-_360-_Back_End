@@ -97,6 +97,7 @@ namespace Health_Care_360_.Controllers
         {
             try
             {
+                
                 var data = BedAllotmentService.AddAllotment(bedAllotment,id);
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
@@ -143,6 +144,20 @@ namespace Health_Care_360_.Controllers
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.NoContent, ex);
+            }
+        }
+        [Route("api/Bed/CheckOut/{id}")]
+        [HttpGet]
+        public HttpResponseMessage CheckOut(int id)
+        {
+            try
+            {
+                var data=BedService.Checkout(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch(Exception ex)
             {
                 return Request.CreateResponse(HttpStatusCode.NoContent, ex);
             }
